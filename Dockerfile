@@ -2,10 +2,16 @@
 FROM node:16-alpine as build
 
 WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
+
+# Copy dependency files
+COPY package.json .
+COPY package-lock.json .
 RUN npm install
-COPY ./ ./
+
+# Copy the rest of the code
+COPY . .
+
+# Build the React app (this will use homepage="." from package.json)
 RUN npm run build
 
 # Stage 2: Serve the app with Nginx
