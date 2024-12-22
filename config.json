@@ -1,0 +1,21 @@
+{
+    "name": "Wonder_Button",
+    "version": "1.0",
+    "slug": "slickbtn",
+    "description": "A cool button app i guess",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "services",
+    "boot": "auto",
+    "ingress": true,
+    "ingress_port": 80,
+    "ingress_entry": "/",
+    "panel_title": "Wonder Button",
+    "panel_icon": "mdi:react",
+    "panel_admin": false,
+    "ports": {
+      "80/tcp": null
+    },
+    "options": {},
+    "schema": {}
+  }
+  
